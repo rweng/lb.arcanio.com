@@ -2,8 +2,7 @@
   "globalDependencies": {
     "jquery": "registry:dt/jquery#1.10.0+20160704162008",
     "mocha": "registry:dt/mocha#2.2.5+20160720003353",
-    "node": "registry:dt/node#6.0.0+20160823142437",
-    "ramda": "github:rweng/typescript-ramda/global/ramda.d.ts#ef9ccdda47f0816ad7f1c66b99f8e472edb0ca23"
+    "node": "registry:dt/node#6.0.0+20160823142437"
   },
   "dependencies": {
     "chai": "registry:npm/chai#3.5.0+20160723033700",

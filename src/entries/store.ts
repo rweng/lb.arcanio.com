@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
+import { not, isSet, assert } from '@rweng/lang';
 
-import { not, isSet, assert } from '../lang';
 import { Entry } from './models';
 
 @Injectable()
