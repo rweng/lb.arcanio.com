@@ -12,6 +12,7 @@ import * as Components from './components';
 import * as Pages from './pages';
 import { routes } from './routes';
 
+
 @NgModule({
     imports: [
         BrowserModule, HttpModule, FormsModule, ReactiveFormsModule, NgbModule,
@@ -22,10 +23,7 @@ import { routes } from './routes';
     ],
     providers: [
         {
-            provide: 'Database', useFactory: () => {
-                window['PouchDB'] = PouchDB;
-                return new PouchDB('LogBook');
-            }
+            provide: 'db', useFactory: () => new PouchDB('LogBook')
         }
     ],
     bootstrap: [

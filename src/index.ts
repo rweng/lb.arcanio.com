@@ -3,10 +3,11 @@ declare const APP_ENV: string;
 if (APP_ENV === 'production') {
     require('offline-plugin/runtime').install();
 } else {
-    window['DEBUG'] = 'fv*';
-    (<any>localStorage).debug = 'fv*';
+    window['DEBUG'] = 'lg*';
+    (<any>localStorage).debug = 'lg*';
 }
 
+window['PouchDB'] = require('pouchdb');
 import '!style!css!sass!./index.scss';
 
 require('reflect-metadata');

@@ -1,13 +1,18 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Entry } from './models';
 
 export class EntryFormGroup extends FormGroup {
     controls: {
-        entry: FormControl
+        content: FormControl
     };
 
     constructor() {
         super({
-            entry: new FormControl(null, Validators.required)
+            content: new FormControl(null, Validators.required)
         });
+    }
+
+    getRawValue(): Entry {
+        return super.getRawValue() as Entry;
     }
 }
