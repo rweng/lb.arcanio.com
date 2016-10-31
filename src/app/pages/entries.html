@@ -1,20 +1,29 @@
 <div class="col-md-8 offset-md-2">
 
 	<form #form="ngForm" [formGroup]='formGroup' (ngSubmit)="save()" class="card">
-        <div class="card-header">New Entry</div>
+		<div class="card-header">New Entry</div>
 
-        <div class="card-block">
-            <div class="form-group">
-                <label for='entry'>Entry</label>
-                <textarea formControlName='content' class="form-control" id="entry" rows="5"></textarea>
-            </div>
-        </div>
+		<div class="card-block">
+			<div class="form-group">
+				<label for='entry'>Entry</label>
+				<textarea formControlName='content' class="form-control" id="entry" rows="5"></textarea>
+			</div>
+		</div>
 
-        <div class="card-footer">
-            <div class="float-xs-right">
-	    	    <button type="submit" class="btn btn-primary">Submit</button>
-    	    </div>
-        </div>
+		<div class="card-footer">
+			<div class="float-xs-right">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</div>
 	</form>
 
+	<hr>
+
+	<div class='card' *ngFor='let entry of entries'>
+		<div class="card-header">{{entry._id}}</div>
+
+		<div class="card-block">
+			{{entry.content}}
+		</div>
+	</div>
 </div>

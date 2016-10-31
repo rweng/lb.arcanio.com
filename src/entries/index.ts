@@ -5,6 +5,7 @@ import { EntriesStore } from './store';
 
 export * from './forms';
 export * from './store';
+export * from './models';
 
 @NgModule({
     imports: [],

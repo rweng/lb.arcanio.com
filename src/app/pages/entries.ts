@@ -1,18 +1,23 @@
 import { Component } from '@angular/core';
 import debug = require('debug');
 
-import { EntryFormGroup, EntriesStore } from '../../entries';
+import { EntryFormGroup, EntriesStore, Entry } from '../../entries';
 
 @Component({
     template: require('./entries.html')
 })
 export class EntriesPage {
     protected log = debug('lg:app:pages:entries');
+    entries: Entry[] = [];
 
     constructor(
         readonly formGroup: EntryFormGroup,
         readonly entriesStore: EntriesStore
     ) { }
+
+    ngOnInit() {
+        this.entriesStore.findAll().subscribe(entries => this.entries = entries);
+    }
 
     save() {
         // TODO: add flash
