@@ -1,0 +1,5 @@
+--compilers ts:ts-node/register
+-r reflect-metadata
+-r test/setup.js
+--watch-extensions ts
+src/**/*.{test,spec}.ts test/separator.js

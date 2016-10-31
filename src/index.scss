@@ -1,0 +1,55 @@
+$fa-font-path: "../node_modules/font-awesome/fonts";
+$enable-gradients: true;
+$enable-rounded: true;
+$enable-transitions: true;
+$enable-flex: true;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/font-awesome/scss/font-awesome.scss';
+
+lb-app > .container {
+    margin-top: 75px;
+}
+
+.buffer {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+// remove double borders of list-groups in cards
+// see https://github.com/twbs/bootstrap/issues/20395
+.card > .list-group {
+     > .list-group-item {
+        border-left: 0;
+        border-right: 0;
+    }
+
+    &:nth-child(2) .list-group-item:first-of-type {
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    &:last-child .list-group-item:last-of-type {
+        border-bottom: 0;
+    }
+}
+
+.card .card-header {
+    font-weight: bold;
+}
+
+.fa.spinning {
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg); }
+  to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
