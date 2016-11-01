@@ -23,7 +23,7 @@
 
 	<div class='card' *ngFor='let entry of entries'>
 		<div class="card-header">
-			{{entry._id}}
+			{{entry.datetime | date:"yyyy-MM-dd HH:mm"}}
 			<div class="float-xs-right">
 				<button class="btn btn-sm btn-danger" (click)='remove(entry)'>
 					<i class="fa fa-remove"></i>
