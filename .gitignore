@@ -1,3 +1,7 @@
 /typings
 /dist
 npm-debug.log
+.envrc
+
+infrastructure/*.retry
+infrastructure/*.tfstate*

@@ -21,6 +21,7 @@
     "start.dist": "browser-sync start --port 8080 --serveStatic 'dist' --files 'dist'",
     "lint": "tsc && tslint '{src,test}/{,**/}*.ts'",
     "test": "true",
+    "infrastructure": "cd infrastructure && terraform apply",
     "release": "npm run build && s3cmd sync --rr --delete-removed --add-header='Cache-Control:max-age=86400,public' dist/ s3://lb.arcanio.com"
   },
   "dependencies": {
