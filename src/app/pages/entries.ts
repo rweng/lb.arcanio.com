@@ -26,8 +26,14 @@ export class EntriesPage {
             return;
         }
 
-        this.log('saving');
-        this.entriesStore.put(this.formGroup.getRawValue());
-        this.formGroup.patchValue({content: null});
+        const entry = this.formGroup.getRawValue();
+
+        this.log('saving', entry);
+        this.entriesStore.put(entry);
+        this.formGroup.patchValue({ content: null });
+    }
+
+    remove(entry: Entry) {
+        this.entriesStore.remove(entry);
     }
 }
