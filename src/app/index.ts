@@ -10,6 +10,7 @@ PouchDB.plugin(require('pouchdb-find'));
 import { EntriesModule } from '../entries';
 import * as Components from './components';
 import * as Pages from './pages';
+import * as Services from './services';
 import { routes } from './routes';
 
 
@@ -22,6 +23,7 @@ import { routes } from './routes';
         values(Pages), values(Components)
     ],
     providers: [
+        values(Services),
         {
             provide: 'db', useFactory: () => new PouchDB('LogBook')
         }
