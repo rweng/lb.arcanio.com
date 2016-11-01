@@ -16,7 +16,7 @@ export class EntriesPage {
     ) { }
 
     ngOnInit() {
-        this.entriesStore.findAll().subscribe(entries => this.entries = entries);
+        this.entriesStore.find().subscribe(entries => this.entries = entries);
     }
 
     save() {
@@ -26,6 +26,8 @@ export class EntriesPage {
             return;
         }
 
+        this.log('saving');
         this.entriesStore.put(this.formGroup.getRawValue());
+        this.formGroup.patchValue({content: null});
     }
 }

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import PouchDB = require('pouchdb');
+PouchDB.plugin(require('pouchdb-find'));
 
 import { EntriesModule } from '../entries';
 import { values } from './lang';
