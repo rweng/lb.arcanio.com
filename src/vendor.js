@@ -9,5 +9,5 @@ require('@angular/forms');
 require('@angular/router');
 
 require('rxjs/Rx');
-require('ramda');
+require('lodash');
 require('@ng-bootstrap/ng-bootstrap')

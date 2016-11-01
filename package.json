@@ -20,15 +20,13 @@
     "build": "rm -rf dist && npm i && NODE_ENV=production webpack --config webpack/prod.config.js --progress --profile --bail",
     "start.dist": "browser-sync start --port 8080 --serveStatic 'dist' --files 'dist'",
     "lint": "tsc && tslint '{src,test}/{,**/}*.ts'",
-    "test": "mocha",
+    "test": "true",
     "release": "npm run build && s3cmd sync --rr --delete-removed --add-header='Cache-Control:max-age=86400,public' dist/ s3://lb.arcanio.com"
   },
   "dependencies": {
     "@angular/common": "^2.0.0",
-    "@angular/compiler": "^2.0.0",
     "@angular/core": "^2.0.0",
     "@angular/forms": "^2.0.0",
-    "@angular/http": "^2.0.0",
     "@angular/platform-browser": "^2.0.0",
     "@angular/platform-browser-dynamic": "^2.0.0",
     "@angular/router": "^3.0.0",

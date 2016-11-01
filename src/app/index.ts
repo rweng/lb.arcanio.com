@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { values } from 'lodash';
 import PouchDB = require('pouchdb');
 PouchDB.plugin(require('pouchdb-find'));
 
 import { EntriesModule } from '../entries';
-import { values } from './lang';
 import * as Components from './components';
 import * as Pages from './pages';
 import { routes } from './routes';
@@ -16,7 +15,7 @@ import { routes } from './routes';
 
 @NgModule({
     imports: [
-        BrowserModule, HttpModule, FormsModule, ReactiveFormsModule, NgbModule,
+        BrowserModule, FormsModule, ReactiveFormsModule, NgbModule,
         RouterModule.forRoot(routes), EntriesModule
     ],
     declarations: [
