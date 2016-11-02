@@ -1,28 +1,12 @@
 <div class="col-md-8 offset-md-2">
-
-	<div class='card' *ngFor='let entry of entries'>
-		<div class="card-header">
-			{{entry.datetime | date:"yyyy-MM-dd HH:mm"}}
-			<div class="float-xs-right">
-				<button class="btn btn-sm btn-primary" (click)='edit(entry)'>
+	<lb-entry-card *ngFor='let entry of entries' [entry]='entry'>
+		<div class="actions">
+			<button class="btn btn-sm btn-primary" (click)='edit(entry)'>
 					<i class="fa fa-pencil"></i>
 				</button>
-				<button class="btn btn-sm btn-danger" (click)='remove(entry)'>
+			<button class="btn btn-sm btn-danger" (click)='remove(entry)'>
 					<i class="fa fa-remove"></i>
 				</button>
-			</div>
 		</div>
-
-		<div class="card-block">
-			<ng2-markdown>
-				{{entry.content}}
-			</ng2-markdown>
-		</div>
-
-		<div class="card-footer" *ngIf='entry.tags'>
-			<span *ngFor='let tag of entry.tags'>
-				<span class="tag tag-info">{{tag}}</span>
-			</span>
-		</div>
-	</div>
+	</lb-entry-card>
 </div>
