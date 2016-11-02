@@ -1,9 +1,5 @@
 <div class="col-md-8 offset-md-2">
 
-	<lb-entry-form [entry]='entry'></lb-entry-form>
-
-	<hr>
-
 	<div class='card' *ngFor='let entry of entries'>
 		<div class="card-header">
 			{{entry.datetime | date:"yyyy-MM-dd HH:mm"}}
