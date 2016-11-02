@@ -3,8 +3,8 @@ declare const APP_ENV: string;
 if (APP_ENV === 'production') {
     require('offline-plugin/runtime').install();
 } else {
-    window['DEBUG'] = 'lg*';
-    (<any>localStorage).debug = 'lg*';
+    window['DEBUG'] = 'lb*';
+    (<any>localStorage).debug = 'lb*';
 }
 
 window['PouchDB'] = require('pouchdb');
