@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import debug = require('debug');
 
 import { SettingsService } from '../services';
 
@@ -7,6 +8,8 @@ import { SettingsService } from '../services';
     template: require('./settings.html')
 })
 export class SettingsPage {
+    private debug = debug('app:pages:settings');
+
     formGroup = new FormGroup({
         syncUrl: new FormControl(null, Validators.required)
     });
@@ -19,6 +22,6 @@ export class SettingsPage {
 
     save() {
         this.settingsService.patch(this.formGroup.getRawValue())
-            .subscribe(v => console.log('settings saved', v));
+            .subscribe(v => this.debug('settings saved', v));
     }
 }
