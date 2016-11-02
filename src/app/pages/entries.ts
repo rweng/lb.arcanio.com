@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import debug = require('debug');
+import { sortBy } from 'lodash';
 
 import { EntryFormGroup, EntriesStore, Entry } from '../../entries';
 
@@ -16,7 +17,7 @@ export class EntriesPage {
     ) { }
 
     ngOnInit() {
-        this.entriesStore.find().subscribe(entries => this.entries = entries);
+        this.entriesStore.find().subscribe(entries => this.entries = sortBy(entries, ['datetime']).reverse());
     }
 
     save() {
