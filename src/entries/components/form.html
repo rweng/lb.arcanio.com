@@ -1,4 +1,4 @@
-<div [formGroup]='this'>
+<div [formGroup]='formGroup'>
 	<div class="form-group">
 		<label>Entry</label>
 		<textarea formControlName='content' class="form-control" rows="5"></textarea>
@@ -6,6 +6,6 @@
 
 	<div class="form-group">
 		<label>Tags <small>separated by comma</small></label>
-		<input type='text' formControlName='tags' class="form-control">
+		<input formControlName='tags' type='text' class="form-control">
 	</div>
 </div>

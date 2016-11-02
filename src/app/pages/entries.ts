@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import debug = require('debug');
 import { sortBy } from 'lodash';
 
 import { EntriesStore, Entry } from '../../entries';
@@ -8,7 +7,6 @@ import { EntriesStore, Entry } from '../../entries';
     template: require('./entries.html')
 })
 export class EntriesPage {
-    protected log = debug('lg:app:pages:entries');
     entries: Entry[] = [];
 
     constructor(

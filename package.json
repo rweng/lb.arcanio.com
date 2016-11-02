@@ -34,6 +34,7 @@
     "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.6",
     "@rweng/ng2-markdown": "file:///Users/rowe/Code/ng2.markdown",
     "@rweng/store": "https://dl.dropboxusercontent.com/u/456244/npm/rweng-store-0.0.1.tgz",
+    "@rweng/util": "https://dl.dropboxusercontent.com/u/456244/npm/rweng-util-0.0.1.tgz",
     "bootstrap": "^4.0.0-alpha.4",
     "debug": "^2.2.0",
     "font-awesome": "^4.6.3",

@@ -1,28 +1,30 @@
-import { Component, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { EntriesStore, EntryFormGroup } from '../../entries';
+import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { EntriesStore, Entry } from '../../entries';
 
 @Component({
     template: require('./entry-edit.html')
 })
 export class EntryEditPage {
-    @ViewChild(EntryFormGroup)
-    entryForm: EntryFormGroup;
+    entry: Entry;
 
     constructor(
         private entriesStore: EntriesStore,
-        private router: Router
+        private router: Router,
+        private route: ActivatedRoute
     ) { }
 
     save() {
-        // TODO: add flash
-        if (!this.entryForm.valid) {
-            console.log('form invalid');
-            return;
-        }
-
-        this.entriesStore.put(this.entryForm.getRawValue())
+        this.entriesStore.put(this.entry)
             .subscribe(() => this.router.navigate(['/']));
+    }
+
+    ngOnInit() {
+        this.route.params.take(1).subscribe((params: any) => {
+            if (params.id !== 'new') {
+                this.entriesStore.get(params.id).subscribe(entry => this.entry = entry);
+            }
+        });
     }
 
     cancel() {
