@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
     template: require('./header.html')
 })
 export class HeaderComponent {
-    constructor() {
-    }
 }

@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-
-import * as Forms from './forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { EntriesStore } from './store';
+import { EntryFormComponent } from './components';
 
-export * from './forms';
 export * from './store';
 export * from './models';
 
 @NgModule({
-    imports: [],
-    declarations: [],
-    exports: [],
-    providers: [Forms.EntryFormGroup, EntriesStore]
+    imports: [ReactiveFormsModule],
+    declarations: [EntryFormComponent],
+    exports: [EntryFormComponent],
+    providers: [EntriesStore]
 })
 export class EntriesModule { }

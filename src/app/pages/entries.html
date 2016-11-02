@@ -1,28 +1,6 @@
 <div class="col-md-8 offset-md-2">
 
-	<form #form="ngForm" [formGroup]='formGroup' (ngSubmit)="save()" class="card">
-		<div class="card-header">
-			New Entry
-		</div>
-
-		<div class="card-block">
-			<div class="form-group">
-				<label>Entry</label>
-				<textarea formControlName='content' class="form-control" rows="5"></textarea>
-			</div>
-
-			<div class="form-group">
-				<label>Tags <small>separated by comma</small></label>
-				<input type='text' formControlName='tags' class="form-control">
-			</div>
-		</div>
-
-		<div class="card-footer">
-			<div class="float-xs-right">
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</div>
-		</div>
-	</form>
+	<lb-entry-form [entry]='entry'></lb-entry-form>
 
 	<hr>
 
@@ -30,6 +8,9 @@
 		<div class="card-header">
 			{{entry.datetime | date:"yyyy-MM-dd HH:mm"}}
 			<div class="float-xs-right">
+				<button class="btn btn-sm btn-primary" (click)='edit(entry)'>
+					<i class="fa fa-pencil"></i>
+				</button>
 				<button class="btn btn-sm btn-danger" (click)='remove(entry)'>
 					<i class="fa fa-remove"></i>
 				</button>
