@@ -7,7 +7,11 @@ import { SettingsService } from '../services';
     <lb-header></lb-header>
     
     <div class="container">
-      <router-outlet></router-outlet>
+      <div class='row'>
+        <div class='col-md-8 offset-md-2'>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
     `
 })
