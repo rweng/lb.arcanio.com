@@ -29,7 +29,12 @@ module.exports = webpackMerge(commonConfig, {
     new OfflinePlugin({
       ServiceWorker: {
         navigateFallbackURL: '/'
-      }
+      },
+
+      // disable appcache since 
+      // 1. it is deprecated and 
+      // 2. we would change cache control of the manifest files to no-cache.  
+      AppCache: false
     })
   ]
 });
