@@ -47,6 +47,7 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "@types/chai": "^3.4.34",
     "@types/debug": "0.0.29",
     "@types/lodash": "^4.14.38",
     "@types/node": "^6.0.46",
