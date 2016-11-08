@@ -13,6 +13,8 @@ import { SettingsService } from '../services';
         </div>
       </div>
     </div>
+
+    <ng2-notifications></ng2-notifications>
     `
 })
 export class AppComponent {

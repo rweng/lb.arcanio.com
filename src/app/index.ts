@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NotificationsModule } from '@rweng/ng2-notifications';
 import { values } from 'lodash';
 import PouchDB = require('pouchdb');
 PouchDB.plugin(require('pouchdb-find'));
@@ -18,7 +19,7 @@ import { routes } from './routes';
 @NgModule({
     imports: [
         BrowserModule, FormsModule, ReactiveFormsModule, NgbModule,
-        RouterModule.forRoot(routes), EntriesModule, CommonModule
+        RouterModule.forRoot(routes), EntriesModule, CommonModule, NotificationsModule
     ],
     declarations: [
         values(Pages), values(Components)
