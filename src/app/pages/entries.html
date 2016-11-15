@@ -8,3 +8,9 @@
 				</button>
 	</div>
 </lb-entry-card>
+
+<div class="alert alert-info" *ngIf='entries?.length === 0'>
+	Seems like you don't have any entries yet.
+	<a routerLink='/entries/new'>Create one</a>, 
+	or <a routerLink='/settings'>go to Settings</a> to setup sync with an existing database.  
+</div>

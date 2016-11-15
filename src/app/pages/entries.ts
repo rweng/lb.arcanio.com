@@ -7,7 +7,7 @@ import { EntriesStore, Entry } from '../../entries';
     template: require('./entries.html')
 })
 export class EntriesPage {
-    entries: Entry[] = [];
+    entries: Entry[];
 
     constructor(
         readonly entriesStore: EntriesStore
