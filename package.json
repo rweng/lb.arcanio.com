@@ -25,11 +25,11 @@
     "release": "npm run build && s3cmd sync --rr --delete-removed --add-header='Cache-Control:max-age=2592000,public' dist/ s3://lb.arcanio.com && s3cmd sync --add-header='Cache-Control:no-cache,public' dist/index.html s3://lb.arcanio.com/index.html"
   },
   "dependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "@angular/forms": "^2.0.0",
-    "@angular/platform-browser": "^2.0.0",
-    "@angular/platform-browser-dynamic": "^2.0.0",
+    "@angular/common": "2.1.x",
+    "@angular/core": "2.1.x",
+    "@angular/forms": "2.1.x",
+    "@angular/platform-browser": "2.1.x",
+    "@angular/platform-browser-dynamic": "2.1.x",
     "@angular/router": "^3.0.0",
     "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.6",
     "@rweng/ng2-markdown": "https://dl.dropboxusercontent.com/u/456244/npm/rweng-ng2-markdown-0.0.1.tgz",
