@@ -32,7 +32,7 @@
     "@angular/platform-browser": "^2.2.0",
     "@angular/platform-browser-dynamic": "^2.2.0",
     "@angular/router": "^3.0.0",
-    "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.6",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.13",
     "@rweng/ng2-markdown": "https://dl.dropboxusercontent.com/u/456244/npm/rweng-ng2-markdown-0.0.1.tgz",
     "@rweng/ng2-notifications": "https://dl.dropboxusercontent.com/u/456244/npm/rweng-ng2-notifications-0.0.1.tgz",
     "@rweng/store": "https://dl.dropboxusercontent.com/u/456244/npm/rweng-store-0.0.1.tgz",
