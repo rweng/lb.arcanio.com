@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { PouchStore } from '@rweng/store';
+import { PouchStore } from '@rweng/pouchdb-store';
 import debug = require('debug');
 
 import { Entry } from './models';
